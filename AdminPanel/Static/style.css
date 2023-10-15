@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+:root{
+    --clr-text: #0E0727;
+    --clr-bg: #F4F2FD;
+    --clr-primary: #3E21B0;
+    --clr-secondary: #CDC3F4;
+    --clr-accent: #4526C5;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+.aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.navigation{
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+}
+.bold{
+    font-weight: 700;
+}
+.mediumBold{
+    font-weight: 500;
+}
+.formCenter{
+    padding-block: calc(0.1 * 100vh);
+}
+.bgColor{
+    background-color: var(--clr-bg);
+}
+.secondaryBg{
+    background-color: var(--clr-secondary);
+}
+.primaryBg{
+    background-color: var(--clr-primary);
+}
+.textColor{
+    color: var(--clr-text);
+}
+.textColor::placeholder{
+    color: var(--clr-text);
+}
+.secondaryTextcolor{
+    color: var(--clr-bg);
+}
+.br-4{
+    border-radius: 4px;
+}
+.pd-1rem_1-5rem{
+    padding: 1rem 1.5rem;
+}
+.mrg-block-1rem{
+    margin-block: 1rem;
+}
+.fx-grow1{
+    flex-grow: 1;
+}
+.width-450px{
+    width: 450px;
+}
+.pd-top-2rem{
+    padding-top: calc(2rem - 0.3rem);
+}
+.overflow-hidden{
+    overflow: hidden;
+}

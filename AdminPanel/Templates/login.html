@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySafety Admin | {{pageTitle}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body class="bgColor">
+    <nav class="aside | navigation | bold | textColor">
+        <div>MySafety Admin Portal</div>
+        <a href="#">Sign In</a>
+    </nav>
+    <main class="formCenter">
+        <form action="admin-signin" class="center fx-grow1">   
+            <h1 class='textColor'>Sign In</h1>
+            <p class='textColor mediumBold'>Sign in and start managing disasters</p>
+            <div class="textColor | center | mediumBold ">
+                <input type="text" placeholder="Login" class="secondaryBg | br-4 | textColor | pd-1rem_1-5rem | mrg-block-1rem | width-450px">
+                <input type="password" placeholder="Password" class="secondaryBg | br-4 | textColor | pd-1rem_1-5rem | mrg-block-1rem | width-450px">
+            </div>
+            <div class="aside | mrg-block-1rem | width-450px">
+                <div class="pd-inl-3rem">
+                    <label for="Remember me" class="checkboxCustom">
+                        <span class="checkmark"></span>
+                        <input type="checkbox" checked="checked" name="Remember me" class="secondaryBg">
+                        Remember Me
+                    </label>
+                </div>
+                <div>
+                    <a href="#">Forgot Password?</a>
+            </div>
+            </div>
+            <button class="width-450px | primaryBg | secondaryTextcolor | br-4 | pd-1rem_1-5rem">Login</button>
+        </form>
+    </main>
+    <img src="{% static "Vectors.svg" %}" alt="none" class="pd-top-2rem | overflow-hidder">
+</body>
+</html>
