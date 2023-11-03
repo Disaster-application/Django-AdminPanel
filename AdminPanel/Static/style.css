@@ -139,3 +139,46 @@ body{
 .overflow-hidden{
     overflow: hidden;
 }
+.fx-row{
+    display: flex;
+    flex-direction: row;
+}
+.fx-col{
+    display: flex;
+    flex-direction: column;
+}
+.fx-align-center{
+    display: flex;
+    align-items: center;
+}
+.fx-justify-space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+.button-primary{
+    background-color: var(--clr-accent);
+    color: var(--clr-bg);
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.25rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+}
+.fx-grow-1{
+    display: flex;
+    flex-grow: 1;
+}
+.width-13em{
+    width: 13em;
+}
+.fx-justify-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.txt-algn-center{
+    text-align: center;
+}
