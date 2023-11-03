@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'App.apps.AppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },
@@ -75,10 +77,24 @@ WSGI_APPLICATION = 'AdminPanel.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Disaster_backend',
+        'USER': 'disaster',
+        'PASSWORD': 'Disaster123*',
+        'HOST': '35.200.187.174',
+        'PORT': '3306'
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'disaster_management',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Ved#2049',
+#         'HOST': 'localhost',  # or the hostname where your MySQL server is running
+#       # or the port on which your MySQL server is listening
+#     }
+# }
 
 
 # Password validation

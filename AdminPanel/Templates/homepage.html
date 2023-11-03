@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySafety Admin | {{pageTitle}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body class="bgColor">
+    <nav class="aside | navigation | bold | textColor">
+        <div>Homepage</div>
+        <a href="#">Alerts</a>
+    </nav>
+    <main class="formCenter">
+        <form class="center fx-grow1" method="post">   
+            {% csrf_token %}
+            <input name="alertMsg" type="text" placeholder="Alert Message" class="secondaryBg | br-4 | textColor | pd-1rem_1-5rem | mrg-block-1rem | width-450px">
+            <select name="alertType">
+                <option value="danger">Danger</option>
+                <option value="warning" >Warning</option>
+                <option value="safe">Safe</option>
+              </select> 
+              <button onclick="" class="width-450px | primaryBg | secondaryTextcolor | br-4 | pd-1rem_1-5rem">Send</button>
+        </form>
+    </main>
+</body>
+</html>                  

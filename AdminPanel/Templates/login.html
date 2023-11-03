@@ -16,12 +16,13 @@
         <a href="#">Sign In</a>
     </nav>
     <main class="formCenter">
-        <form action="admin-signin" class="center fx-grow1">   
+        <form class="center fx-grow1"  method="post">   
+            {% csrf_token %}
             <h1 class='textColor'>Sign In</h1>
             <p class='textColor mediumBold'>Sign in and start managing disasters</p>
             <div class="textColor | center | mediumBold ">
-                <input type="text" placeholder="Login" class="secondaryBg | br-4 | textColor | pd-1rem_1-5rem | mrg-block-1rem | width-450px">
-                <input type="password" placeholder="Password" class="secondaryBg | br-4 | textColor | pd-1rem_1-5rem | mrg-block-1rem | width-450px">
+                <input name="username" type="text" placeholder="Login" class="secondaryBg | br-4 | textColor | pd-1rem_1-5rem | mrg-block-1rem | width-450px">
+                <input name="user_password" type="password" placeholder="Password" class="secondaryBg | br-4 | textColor | pd-1rem_1-5rem | mrg-block-1rem | width-450px">
             </div>
             <div class="aside | mrg-block-1rem | width-450px">
                 <div class="pd-inl-3rem">
@@ -35,7 +36,7 @@
                     <a href="#">Forgot Password?</a>
             </div>
             </div>
-            <button class="width-450px | primaryBg | secondaryTextcolor | br-4 | pd-1rem_1-5rem">Login</button>
+            <button onclick="" class="width-450px | primaryBg | secondaryTextcolor | br-4 | pd-1rem_1-5rem">Login</button>
         </form>
     </main>
     <img src="{% static "Vectors.svg" %}" alt="none" class="pd-top-2rem | overflow-hidder">
